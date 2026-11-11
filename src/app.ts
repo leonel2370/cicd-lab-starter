@@ -8,6 +8,8 @@ app.get('/', (_request, response) => {
   response.type('html').send(`
     <h1>CI/CD Lab</h1>
     <h2>hello world</h2>
+        <p> salut tout le monde mon premier CI  avec github actions
+        </p>
     <p>The application is running.</p>
     <p>Version ${version}</p>
   `);
