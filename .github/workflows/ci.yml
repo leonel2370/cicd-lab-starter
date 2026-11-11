@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - main
+      - master
+      - feat/version-test-endpoint
   pull_request:
     branches:
       - main
+      - master
 
 permissions:
   contents: read
