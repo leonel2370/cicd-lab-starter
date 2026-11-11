@@ -7,6 +7,7 @@ app.get('/', (_request, response) => {
 
   response.type('html').send(`
     <h1>CI/CD Lab</h1>
+    <h2>hello world</h2>
     <p>The application is running.</p>
     <p>Version ${version}</p>
   `);
@@ -15,6 +16,11 @@ app.get('/', (_request, response) => {
 app.get('/api/health', (_request, response) => {
   response.json({
     status: 'ok',
+  });
+});
+app.get('/api/version', (_request, response) => {
+  response.json({
+    version: process.env.APP_VERSION ?? 'development',
   });
 });
 
